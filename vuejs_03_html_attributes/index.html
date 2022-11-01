@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Vuejs html attributes</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-on:input="cssClass = $event.target.value">
+        <p v-bind:class="cssClass">Class: {{ cssClass }}</p>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

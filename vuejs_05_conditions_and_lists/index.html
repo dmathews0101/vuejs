@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Vuejs Conditionals and Lists</title>
+</head>
+
+<body>
+    <div id="app">
+        <button v-on:click="show = !show">Show / Hide</button>
+        <p v-if="show">I am sometimes visible</p>
+        <p v-else>Am I visible?</p>
+        <p v-show="show">Hello, I am here</p>
+        <hr>
+        <li v-for="person in persons">{{ person.name }}</li>
+        <hr>
+        <li v-for="(person, index) in persons">{{ person.name }} - {{ index }}</li>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
